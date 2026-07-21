@@ -262,6 +262,12 @@ h3 {
   background: var(--white);
 }
 
+.featured-service {
+  grid-column: 1 / -1;
+  min-height: 0;
+  background: linear-gradient(135deg, #ffffff 0%, #eef6f2 100%);
+}
+
 .service-card p {
   color: var(--subtle);
   font-size: 16px;
@@ -417,6 +423,124 @@ h3 {
   line-height: 1.7;
 }
 
+.catholic-calendar-page {
+  --accent: #2f7d5b;
+  --accent-strong: #225a42;
+  --sun: #c89b4f;
+}
+
+.app-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.82fr);
+  gap: 58px;
+  align-items: center;
+  min-height: calc(100svh - 72px);
+  padding: 72px max(var(--page-gutter), calc((100vw - var(--page-max)) / 2)) 58px;
+}
+
+.app-hero-copy h1 {
+  margin-bottom: 24px;
+}
+
+.phone-preview {
+  display: grid;
+  justify-items: center;
+}
+
+.phone-shell {
+  width: min(100%, 360px);
+  padding: 18px;
+  border: 1px solid rgba(32, 33, 36, 0.12);
+  border-radius: 34px;
+  background: #f8f5ee;
+  box-shadow: var(--shadow);
+}
+
+.phone-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 14px 18px;
+}
+
+.phone-top span {
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.phone-top strong {
+  color: var(--accent);
+  font-size: 13px;
+}
+
+.calendar-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  padding: 12px;
+  border-radius: 18px;
+  background: var(--white);
+}
+
+.calendar-preview-grid span,
+.calendar-preview-grid b {
+  display: grid;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 13px;
+}
+
+.calendar-preview-grid span {
+  color: var(--subtle);
+  font-weight: 800;
+}
+
+.calendar-preview-grid b {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.calendar-preview-grid .muted {
+  color: #b0aaa0;
+}
+
+.calendar-preview-grid .active {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.day-card {
+  margin-top: 12px;
+  padding: 18px;
+  border-radius: 18px;
+  background: var(--ink);
+  color: var(--white);
+}
+
+.day-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.day-card strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.day-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 @media (max-width: 920px) {
   .site-header {
     align-items: flex-start;
@@ -434,6 +558,7 @@ h3 {
   }
 
   .hero,
+  .app-hero,
   .intro,
   .split {
     grid-template-columns: 1fr;
@@ -466,6 +591,7 @@ h3 {
   }
 
   .hero,
+  .app-hero,
   .section {
     padding-right: 22px;
     padding-left: 22px;
